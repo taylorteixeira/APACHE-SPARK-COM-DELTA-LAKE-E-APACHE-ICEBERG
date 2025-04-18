@@ -48,8 +48,8 @@ Deve apontar para algo como:
 
 ####  Se o java não estiver configurado: (recomendado):
 
-Baixe o JDK 17:
-https://adoptium.net/temurin/releases/?version=17
+Baixe o JDK 11:
+https://adoptium.net/temurin/releases/?version=11
 
 ```bash
 C:\Program Files\Java\jdk-11
