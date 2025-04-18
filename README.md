@@ -39,4 +39,28 @@ uv pip freeze
 ```
 Atualizar o requirements.txt
 
+**Nota:** Antes de executar o arquivo citado acima, não esqueça de selecionar o seu ambiente virtual (.venv) como Kernel do seu jupyter notebook.
+
+![image](https://github.com/user-attachments/assets/6394e5b6-c51e-4245-bad2-450d864e422a)
+
 Os exemplos de código pyspark/python para instanciar o Spark, bem como criar e manipular uma tabela Delta Lake, está no arquivo `spark-delta.ipynb` e `spark-iceberg.ipynb`.
+Deve apontar para algo como:
+
+####  Se o java não estiver configurado: (recomendado):
+
+Baixe o JDK 17:
+https://adoptium.net/temurin/releases/?version=17
+
+```bash
+C:\Program Files\Java\jdk-11
+
+```
+No PowerShell (temporário):
+```bash
+$env:JAVA_HOME="C:\Program Files\Java\jdk-11"
+$env:PATH="$env:JAVA_HOME\bin;$env:PATH"
+```
+
+Ou defina permanentemente nas variáveis de ambiente do Windows.
+
+⚠️ Use preferencialmente o JDK 8, 11 ou 17, pois são compatíveis com Spark. Evite o JDK 21.
