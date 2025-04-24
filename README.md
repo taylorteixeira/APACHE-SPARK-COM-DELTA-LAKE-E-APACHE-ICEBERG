@@ -45,6 +45,15 @@ Atualizar o requirements.txt
 
 Os exemplos de código pyspark/python para instanciar o Spark, bem como criar e manipular uma tabela Delta Lake, está no arquivo `spark-delta.ipynb` e `spark-iceberg.ipynb`.
 
+#### Usando `uv` (recomendado):
+
+```bash
+uv add mkdocs-material
+```
+```bash
+python -m mkdocs build
+```
+
 ## ❗Erros possoveis: 
 
 

@@ -1,0 +1,56 @@
+site_name: Apache Spark com Delta Lake e Iceberg
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - search.share
+    - toc.integrate
+
+nav:
+  - Início: index.md
+  - Introdução:
+      - O que é Apache Spark: intro/spark.md
+      - O que é Delta Lake: intro/delta-lake.md
+      - O que é Iceberg: intro/iceberg.md
+  - Operações CRUD: crud-operations.md
+  - Exemplos:
+      - Delta Lake: examples/delta-lake.md
+      - Iceberg: examples/iceberg.md
+  - Configuração:
+      - Ambiente: setup/environment.md
+      - Dependências: setup/dependencies.md
+  - Referência:
+      - Comandos SQL: reference/sql-commands.md
+      - API Python: reference/python-api.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
