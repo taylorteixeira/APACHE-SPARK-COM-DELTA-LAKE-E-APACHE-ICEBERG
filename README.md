@@ -107,7 +107,8 @@ python -m mkdocs build
 
 ![image](https://github.com/user-attachments/assets/c72731a1-e35f-4a98-bc79-94b59facb5a9)
 
-![image](https://github.com/user-attachments/assets/d217bb4a-a01f-4dbc-ab5b-015e9830f78b)
+![image](https://github.com/user-attachments/assets/8343c266-efcc-4026-b300-32b2eecff735)
+
 
 
 
