@@ -1,28 +1,6 @@
 site_name: Apache Spark com Delta Lake e Iceberg
-site_description: 'Guia prático para utilizar Apache Spark com os formatos de armazenamento Delta Lake e Apache Iceberg'
-site_author: 'Seu Nome'
-repo_url: 'https://github.com/seu-usuario/APACHE-SPARK-COM-DELTA-LAKE-E-APACHE-ICEBERG'
-
 theme:
   name: material
-  language: 'pt-BR'
-  palette:
-    # Esquema de cores claro
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/weather-night
-        name: Alternar para modo escuro
-    # Esquema de cores escuro
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/weather-sunny
-        name: Alternar para modo claro
   features:
     - navigation.tabs
     - navigation.sections
@@ -32,17 +10,6 @@ theme:
     - search.suggest
     - search.share
     - toc.integrate
-    - content.code.copy
-    - content.code.annotate
-  icon:
-    repo: fontawesome/brands/github
-    
-plugins:
-  - search
-  - mermaid:
-      version: 10.0.2
-  - minify:
-      minify_html: true
 
 nav:
   - Início: index.md
@@ -54,11 +21,6 @@ nav:
   - Exemplos:
       - Delta Lake: examples/delta-lake.md
       - Iceberg: examples/iceberg.md
-  - Comandos:
-      - Spark Delta: commands/delta-commands.md
-      - Spark Iceberg: commands/iceberg-commands.md
-  - Modelo de Dados:
-      - Diagrama ER: data-model/er-diagram.md
   - Configuração:
       - Ambiente: setup/environment.md
       - Dependências: setup/dependencies.md
@@ -68,48 +30,27 @@ nav:
 
 markdown_extensions:
   - admonition
-  - attr_list
-  - md_in_html
   - codehilite
   - footnotes
   - meta
   - toc:
       permalink: true
-  - pymdownx.arithmatex:
-      generic: true
+  - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.smartsymbols
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed:
-      alternate_style: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/seu-usuario
-    - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/in/seu-usuario
-
-extra_css:
-  - assets/stylesheets/extra.css
