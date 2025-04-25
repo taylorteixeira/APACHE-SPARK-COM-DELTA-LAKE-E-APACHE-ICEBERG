@@ -1,47 +1,48 @@
 site_name: Apache Spark com Delta Lake e Iceberg
-site_description: 'Documentação completa sobre Apache Spark com Delta Lake e Apache Iceberg'
-site_author: 'Desenvolvido por Taylor'
-repo_name: 'APACHE-SPARK-COM-DELTA-LAKE-E-APACHE-ICEBERG'
+site_description: 'Guia prático para utilizar Apache Spark com os formatos de armazenamento Delta Lake e Apache Iceberg'
+site_author: 'Seu Nome'
+repo_url: 'https://github.com/seu-usuario/APACHE-SPARK-COM-DELTA-LAKE-E-APACHE-ICEBERG'
 
 theme:
   name: material
   language: 'pt-BR'
   palette:
+    # Esquema de cores claro
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: indigo
-      accent: deep orange
+      accent: indigo
       toggle:
         icon: material/weather-night
-        name: Modo escuro
+        name: Alternar para modo escuro
+    # Esquema de cores escuro
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: deep purple
-      accent: orange
+      primary: indigo
+      accent: indigo
       toggle:
         icon: material/weather-sunny
-        name: Modo claro
+        name: Alternar para modo claro
   features:
     - navigation.tabs
     - navigation.sections
     - navigation.expand
     - navigation.top
-    - navigation.tracking
-    - navigation.footer
     - search.highlight
     - search.suggest
     - search.share
+    - toc.integrate
     - content.code.copy
     - content.code.annotate
-    - toc.integrate
   icon:
     repo: fontawesome/brands/github
-    logo: material/database-outline
-
+    
 plugins:
   - search
   - mermaid:
-      version: 10.2.4
+      version: 10.0.2
+  - minify:
+      minify_html: true
 
 nav:
   - Início: index.md
@@ -53,11 +54,11 @@ nav:
   - Exemplos:
       - Delta Lake: examples/delta-lake.md
       - Iceberg: examples/iceberg.md
-  - Explicação de Comandos:
-      - Spark Delta: spark-commands/delta-commands.md
-      - Spark Iceberg: spark-commands/iceberg-commands.md
+  - Comandos:
+      - Spark Delta: commands/delta-commands.md
+      - Spark Iceberg: commands/iceberg-commands.md
   - Modelo de Dados:
-      - Modelo ER: data-model/er-diagram.md
+      - Diagrama ER: data-model/er-diagram.md
   - Configuração:
       - Ambiente: setup/environment.md
       - Dependências: setup/dependencies.md
@@ -67,24 +68,27 @@ nav:
 
 markdown_extensions:
   - admonition
+  - attr_list
+  - md_in_html
   - codehilite
   - footnotes
   - meta
   - toc:
       permalink: true
-  - attr_list
-  - md_in_html
-  - pymdownx.arithmatex
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.mark
@@ -100,11 +104,12 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
-extra_css:
-  - stylesheets/extra.css
-
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/usuario/APACHE-SPARK-COM-DELTA-LAKE-E-APACHE-ICEBERG
-      name: GitHub
+      link: https://github.com/seu-usuario
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/seu-usuario
+
+extra_css:
+  - assets/stylesheets/extra.css
