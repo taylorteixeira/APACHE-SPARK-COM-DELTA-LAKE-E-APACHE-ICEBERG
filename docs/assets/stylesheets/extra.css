@@ -1,0 +1,129 @@
+/* Melhorias visuais para documentação do Spark com Delta Lake e Iceberg */
+
+/* Cores personalizadas para destaques de código */
+.md-typeset code {
+    border-radius: 4px;
+    padding: 2px 5px;
+    font-size: 0.9em;
+}
+
+/* Efeito de sombra suave nos blocos de código */
+.md-typeset pre > code {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Melhorar aparência das tabelas */
+.md-typeset__table {
+    min-width: 100%;
+}
+
+.md-typeset table:not([class]) {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.md-typeset table:not([class]) th {
+    background-color: var(--md-primary-fg-color);
+    color: white;
+}
+
+.md-typeset table:not([class]) tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Melhorar aparência dos diagramas mermaid */
+.mermaid {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+/* Estilo para os cards na página inicial */
+.md-typeset .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1rem;
+    margin: 1rem 0;
+}
+
+.md-typeset .grid .card {
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: all 0.3s;
+}
+
+.md-typeset .grid .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.md-typeset .grid .card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--md-primary-fg-color);
+}
+
+/* Melhorar aparência dos admonitions */
+.md-typeset .admonition {
+    border-left-width: 4px;
+    border-radius: 4px;
+}
+
+/* Destacar links "Ver mais" */
+.md-typeset a.more {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.md-typeset a.more:hover {
+    transform: translateX(5px);
+}
+
+/* Melhorar a navegação */
+.md-header {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para badges */
+.md-typeset .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.md-typeset .badge.delta {
+    background-color: #3949AB;
+    color: white;
+}
+
+.md-typeset .badge.iceberg {
+    background-color: #00ACC1;
+    color: white;
+}
+
+.md-typeset .badge.spark {
+    background-color: #E64A19;
+    color: white;
+}
+
+/* Melhorar exibição de blocos de código em telas pequenas */
+@media screen and (max-width: 76.1875em) {
+    .md-typeset pre > code {
+        border-radius: 0;
+    }
+}
+
+/* Estilo para cabeçalho de seção */
+.md-typeset h2 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 0.3em;
+}
