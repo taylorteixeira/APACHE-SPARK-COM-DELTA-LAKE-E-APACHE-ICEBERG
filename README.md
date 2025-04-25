@@ -7,6 +7,55 @@ Projeto python inicializado com o [UV](https://github.com/astral-sh/uv).
 
 Comandos utilizados para setup do ambiente:
 
+## 📍 Configuração do Ambiente WSLWindows Subsystem for Linux (WSL) 
+
+## 1. Pré-requisitos
+```bash
+git clone https://github.com/taylorteixeira/APACHE-SPARK-COM-DELTA-LAKE-E-APACHE-ICEBERG.git
+cd APACHE-SPARK-COM-DELTA-LAKE-E-APACHE-ICEBERG
+```
+
+## 2. Configuração 
+
+```bash
+# Instalar o UV (se ainda não estiver instalado)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Inicializar o ambiente virtual
+uv venv
+source .venv/bin/activate
+
+# Instalar as dependências necessárias
+uv pip install -r requirements.txt
+
+# Instalar o JupyterLab e ipykernel
+uv pip install jupyterlab ipykernel
+```
+
+## 3. Configure o Java no WSL (necessário para o Spark)
+
+```bash
+# Instalar o OpenJDK 11
+sudo apt update
+sudo apt install openjdk-11-jdk
+
+# Configurar a variável JAVA_HOME
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+export PATH=$JAVA_HOME/bin:$PATH
+```
+## 4. Iniciando o Jupyter Lab
+
+```bash
+# Ativar o ambiente virtual (se ainda não estiver ativo)
+source .venv/bin/activate
+
+# Iniciar o Jupyter Lab
+jupyter lab
+```
+
+
+## 📍 Configuração do Ambiente Windowns 
+
 #### Usando `uv` (recomendado):
 
 ```bash
@@ -32,12 +81,12 @@ source .venv/bin/activate
 uv add pyspark==3.5.3 delta-spark==3.2.0 jupyterlab ipykernel
 ```
 
-#### Usando `uv` (recomendado):
+#### Usando `uv` Atualizar o requirements.txt (recomendado):
 
 ```bash
 uv pip freeze
 ```
-Atualizar o requirements.txt
+
 
 **Nota:** Antes de executar o arquivo citado acima, não esqueça de selecionar o seu ambiente virtual (.venv) como Kernel do seu jupyter notebook.
 
