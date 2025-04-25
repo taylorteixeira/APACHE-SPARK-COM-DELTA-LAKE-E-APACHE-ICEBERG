@@ -103,6 +103,14 @@ uv add mkdocs-material
 python -m mkdocs build
 ```
 
+## Modelo ER: 
+
+![image](https://github.com/user-attachments/assets/c72731a1-e35f-4a98-bc79-94b59facb5a9)
+
+![image](https://github.com/user-attachments/assets/d217bb4a-a01f-4dbc-ab5b-015e9830f78b)
+
+
+
 ## ❗Erros possoveis: 
 
 
