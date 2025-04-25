@@ -1,0 +1,5 @@
+mkdocs==1.5.3
+mkdocs-material==9.5.3
+pymdown-extensions==10.5
+markdown==3.5.2
+mermaid==0.12.0 
