@@ -200,7 +200,7 @@ spark = SparkSession.builder \
     .getOrCreate()
 ```
 
----
+
 
 ## Observações
 
@@ -208,7 +208,7 @@ spark = SparkSession.builder \
 - O `winutils.exe` não realiza nada de importante em ambientes locais — ele apenas evita falhas nas chamadas nativas do Spark para o Hadoop.
 - Para ambientes Linux/Mac, isso **não é necessário**.
 
----
+
 
 ## Requisitos
 
@@ -218,10 +218,16 @@ spark = SparkSession.builder \
 - Apache Iceberg (via `spark.jars.packages`)
 - `winutils.exe` no Windows
 
----
+
 
 ## Referências
 
 - [Problemas comuns do Hadoop no Windows](https://wiki.apache.org/hadoop/WindowsProblems)
 - [GitHub: cdarlint/winutils](https://github.com/cdarlint/winutils) 
 
+
+
+## Autores
+
+- Eduardo Ribarski
+- Taylor Vargas Teixeira
