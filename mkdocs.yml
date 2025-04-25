@@ -1,15 +1,47 @@
 site_name: Apache Spark com Delta Lake e Iceberg
+site_description: 'Documentação completa sobre Apache Spark com Delta Lake e Apache Iceberg'
+site_author: 'Desenvolvido por Taylor'
+repo_name: 'APACHE-SPARK-COM-DELTA-LAKE-E-APACHE-ICEBERG'
+
 theme:
   name: material
+  language: 'pt-BR'
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Modo escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: orange
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
   features:
     - navigation.tabs
     - navigation.sections
     - navigation.expand
     - navigation.top
+    - navigation.tracking
+    - navigation.footer
     - search.highlight
     - search.suggest
     - search.share
+    - content.code.copy
+    - content.code.annotate
     - toc.integrate
+  icon:
+    repo: fontawesome/brands/github
+    logo: material/database-outline
+
+plugins:
+  - search
+  - mermaid:
+      version: 10.2.4
 
 nav:
   - Início: index.md
@@ -21,6 +53,11 @@ nav:
   - Exemplos:
       - Delta Lake: examples/delta-lake.md
       - Iceberg: examples/iceberg.md
+  - Explicação de Comandos:
+      - Spark Delta: spark-commands/delta-commands.md
+      - Spark Iceberg: spark-commands/iceberg-commands.md
+  - Modelo de Dados:
+      - Modelo ER: data-model/er-diagram.md
   - Configuração:
       - Ambiente: setup/environment.md
       - Dependências: setup/dependencies.md
@@ -35,6 +72,8 @@ markdown_extensions:
   - meta
   - toc:
       permalink: true
+  - attr_list
+  - md_in_html
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
@@ -44,13 +83,28 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-  - pymdownx.highlight
+  - pymdownx.highlight:
+      anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.smartsymbols
-  - pymdownx.superfences
-  - pymdownx.tabbed
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/usuario/APACHE-SPARK-COM-DELTA-LAKE-E-APACHE-ICEBERG
+      name: GitHub

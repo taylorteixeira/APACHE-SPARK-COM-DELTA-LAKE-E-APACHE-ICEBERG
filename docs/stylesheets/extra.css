@@ -1,0 +1,110 @@
+/* Estilos personalizados para documentação Spark, Delta e Iceberg */
+
+/* Cores para as tecnologias */
+.spark-color { color: #E25A1C; }
+.delta-color { color: #00ADD8; }
+.iceberg-color { color: #2C3E67; }
+
+/* Badges para tecnologias */
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.6em;
+  font-size: 0.75em;
+  font-weight: 700;
+  border-radius: 2em;
+  color: white;
+  margin-right: 0.5em;
+}
+
+.badge-spark { background-color: #E25A1C; }
+.badge-delta { background-color: #00ADD8; }
+.badge-iceberg { background-color: #2C3E67; }
+
+/* Melhorias para blocos de código */
+.md-typeset pre > code {
+  border-left: 4px solid var(--md-primary-fg-color);
+  border-radius: 0.2rem;
+}
+
+.md-typeset .codehilite pre, 
+.md-typeset .highlight pre {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Melhoria de tabelas */
+.md-typeset table:not([class]) {
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  font-weight: bold;
+}
+
+.md-typeset table:not([class]) tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.025);
+}
+
+/* Cards para exemplos */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-top: 4px solid var(--md-primary-fg-color);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+/* Diagrama ER */
+.er-diagram {
+  max-width: 100%;
+  margin: 2rem auto;
+}
+
+/* Ícones de recurso */
+.feature-icon {
+  font-size: 1.5rem;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  color: var(--md-primary-fg-color);
+}
+
+/* Notas e avisos aprimorados */
+.md-typeset .admonition {
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07);
+}
+
+/* Indentação de lista */
+.md-typeset ul li ul,
+.md-typeset ol li ol {
+  margin-bottom: 0.5em;
+}
+
+/* Especificação de fontes */
+body {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+}
+
+code, pre {
+  font-family: 'Roboto Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
